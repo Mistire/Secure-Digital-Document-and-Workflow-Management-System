@@ -2,6 +2,40 @@
 
 A highly secure, full-stack document management system built for a University Computer System Security course. It enforces **MAC**, **DAC**, **RBAC**, **RuBAC**, and **ABAC** access control models, with a complete secure authentication layer including JWT, Google OAuth 2.0, and TOTP-based MFA.
 
+## How to Run
+
+**Prerequisites**: Docker and Docker Compose installed.
+
+```bash
+# 1. Clone the repo
+git clone <repo-url>
+cd Secure-Digital-Document-and-Workflow-Management-System
+
+# 2. Configure environment — set your Google Client ID and email credentials
+cp .env.example .env   # or edit .env directly
+
+# 3. Build and start all services (backend, frontend, database)
+docker compose up --build
+
+# 4. Run migrations (first time only)
+docker compose exec backend python manage.py migrate
+
+# 5. (Optional) Create a superuser for the admin panel
+docker compose exec backend python manage.py createsuperuser
+```
+
+| Service | URL |
+| ------- | --- |
+| Frontend | `http://localhost:3000` |
+| Backend API | `http://localhost:8001/api/` |
+| Swagger docs | `http://localhost:8001/api/docs/` |
+| Admin panel | `http://localhost:3000/admin` |
+
+> To stop: `docker compose down`
+> To wipe the database volume: `docker compose down -v`
+
+---
+
 ## Tech Stack
 
 - **Backend**: Django 6.0, Django REST Framework
