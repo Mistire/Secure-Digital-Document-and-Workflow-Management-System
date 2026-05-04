@@ -40,11 +40,12 @@ services:
       - EMAIL_HOST_PASSWORD=${EMAIL_HOST_PASSWORD}
       - ENCRYPTION_KEY=Z6GP5c16rd6y92CWCgg6SUltLZrI7M_DTWiLRRGa5Ac=
       - RECAPTCHA_SECRET_KEY=${RECAPTCHA_SECRET_KEY}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
       # In prod, we would use a real email backend
     depends_on:
       - db
     ports:
-      - "8000:8000"
+      - "8001:8000"
     networks:
       - secure-net
 
@@ -55,11 +56,13 @@ services:
       args:
         - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
         - NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-      
+        - NEXT_PUBLIC_GOOGLE_CLIENT_ID=${NEXT_PUBLIC_GOOGLE_CLIENT_ID}
+
     restart: always
     environment:
       - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
       - NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+      - NEXT_PUBLIC_GOOGLE_CLIENT_ID=${NEXT_PUBLIC_GOOGLE_CLIENT_ID}
 
     ports:
       - "3000:3000"

@@ -45,3 +45,11 @@ export const isAdmin = () => {
     const user: any = getUser();
     return user && (user.is_staff || user.is_superuser);
 }
+
+export const googleLogin = async (credential: string) => {
+  const response = await api.post('/auth/google/', { credential });
+  const { access, refresh } = response.data;
+  Cookies.set('access_token', access);
+  Cookies.set('refresh_token', refresh);
+  return jwtDecode(access);
+};
