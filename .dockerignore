@@ -1,0 +1,14 @@
+
+node_modules
+.next
+.git
+.vscode
+__pycache__
+*.pyc
+.env
+.venv
+venv
+coverage
+htmlcov
+db.sqlite3
+media/

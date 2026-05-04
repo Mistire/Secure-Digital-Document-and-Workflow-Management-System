@@ -1,0 +1,1101 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 3,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 3,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 3,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 3,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 2,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 2,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 2,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 2,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 6,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 6,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 6,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 6,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add document",
+    "content_type": 7,
+    "codename": "add_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change document",
+    "content_type": 7,
+    "codename": "change_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete document",
+    "content_type": 7,
+    "codename": "delete_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view document",
+    "content_type": 7,
+    "codename": "view_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add workflow log",
+    "content_type": 8,
+    "codename": "add_workflowlog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change workflow log",
+    "content_type": 8,
+    "codename": "change_workflowlog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete workflow log",
+    "content_type": 8,
+    "codename": "delete_workflowlog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view workflow log",
+    "content_type": 8,
+    "codename": "view_workflowlog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add attribute policy",
+    "content_type": 10,
+    "codename": "add_attributepolicy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change attribute policy",
+    "content_type": 10,
+    "codename": "change_attributepolicy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete attribute policy",
+    "content_type": 10,
+    "codename": "delete_attributepolicy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view attribute policy",
+    "content_type": 10,
+    "codename": "view_attributepolicy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add role",
+    "content_type": 11,
+    "codename": "add_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change role",
+    "content_type": 11,
+    "codename": "change_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete role",
+    "content_type": 11,
+    "codename": "delete_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view role",
+    "content_type": 11,
+    "codename": "view_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add time location rule",
+    "content_type": 12,
+    "codename": "add_timelocationrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change time location rule",
+    "content_type": 12,
+    "codename": "change_timelocationrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete time location rule",
+    "content_type": 12,
+    "codename": "delete_timelocationrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view time location rule",
+    "content_type": 12,
+    "codename": "view_timelocationrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add access log",
+    "content_type": 9,
+    "codename": "add_accesslog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change access log",
+    "content_type": 9,
+    "codename": "change_accesslog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete access log",
+    "content_type": 9,
+    "codename": "delete_accesslog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view access log",
+    "content_type": 9,
+    "codename": "view_accesslog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add user doc permission",
+    "content_type": 13,
+    "codename": "add_userdocpermission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change user doc permission",
+    "content_type": 13,
+    "codename": "change_userdocpermission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete user doc permission",
+    "content_type": 13,
+    "codename": "delete_userdocpermission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view user doc permission",
+    "content_type": 13,
+    "codename": "view_userdocpermission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add user role",
+    "content_type": 14,
+    "codename": "add_userrole"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change user role",
+    "content_type": 14,
+    "codename": "change_userrole"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete user role",
+    "content_type": 14,
+    "codename": "delete_userrole"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view user role",
+    "content_type": 14,
+    "codename": "view_userrole"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add audit entry",
+    "content_type": 15,
+    "codename": "add_auditentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change audit entry",
+    "content_type": 15,
+    "codename": "change_auditentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete audit entry",
+    "content_type": 15,
+    "codename": "delete_auditentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view audit entry",
+    "content_type": 15,
+    "codename": "view_auditentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "users",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "documents",
+    "model": "document"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "workflows",
+    "model": "workflowlog"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "access_control",
+    "model": "accesslog"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "access_control",
+    "model": "attributepolicy"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "access_control",
+    "model": "role"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "access_control",
+    "model": "timelocationrule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "access_control",
+    "model": "userdocpermission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "access_control",
+    "model": "userrole"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "audit",
+    "model": "auditentry"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 24,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$QL1e0t5U7BqJmuAwANbxgY$7G/dEcagNEnZzcd5B4bmCg0Aq8YQXYOvuf7pOF1w9n0=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-12-29T11:13:29.265Z",
+    "clearance_level": "public",
+    "department": null,
+    "phone_number": null,
+    "mfa_secret": null,
+    "mfa_enabled": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 25,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$n0q4PFemkv5mjkoTUXxMsX$5LOONRn1w1H8Hw8mvvaMGsnbAIJQKAeL3S++rT8Qvgo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "user",
+    "first_name": "",
+    "last_name": "",
+    "email": "user@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-29T11:13:29.662Z",
+    "clearance_level": "internal",
+    "department": null,
+    "phone_number": null,
+    "mfa_secret": null,
+    "mfa_enabled": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 28,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$EZpnvRgoSd0K4YAajxkMkH$tFK24YE9ygqmjVBh4wdAcH0+VjYRe7dCkZaorNtkOwc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mfa_test_user",
+    "first_name": "",
+    "last_name": "",
+    "email": "mfa@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-29T11:29:54.377Z",
+    "clearance_level": "public",
+    "department": null,
+    "phone_number": null,
+    "mfa_secret": "MWB2MCQV4CIYBYIGEHGLOPWXJ57VQ5IT",
+    "mfa_enabled": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "access_control.role",
+  "pk": 17,
+  "fields": {
+    "name": "Creator",
+    "description": "",
+    "permissions": [
+      "submit"
+    ]
+  }
+},
+{
+  "model": "access_control.role",
+  "pk": 18,
+  "fields": {
+    "name": "Reviewer",
+    "description": "",
+    "permissions": [
+      "approve_review"
+    ]
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 1,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/register/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T10:51:01.389Z",
+    "details": "Status: 201"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 2,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/login/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T10:51:01.702Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 3,
+  "fields": {
+    "user": null,
+    "action": "POST /api/documents/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T10:51:01.721Z",
+    "details": "Status: 201"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 4,
+  "fields": {
+    "user": null,
+    "action": "POST /api/workflows/11/submit/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T10:51:01.731Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 5,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/register/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T10:51:01.735Z",
+    "details": "Status: 400"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 6,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/register/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T10:51:40.655Z",
+    "details": "Status: 201"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 7,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/login/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T10:51:40.979Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 8,
+  "fields": {
+    "user": null,
+    "action": "POST /api/documents/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T10:51:40.997Z",
+    "details": "Status: 201"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 9,
+  "fields": {
+    "user": null,
+    "action": "POST /api/workflows/12/submit/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T10:51:41.006Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 10,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/register/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T10:51:41.331Z",
+    "details": "Status: 201"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 11,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/login/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T10:51:41.705Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 12,
+  "fields": {
+    "user": null,
+    "action": "POST /api/workflows/12/approve_review/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T10:51:41.722Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 13,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/login/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:13:30.398Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 14,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/login/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:13:30.702Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 15,
+  "fields": {
+    "user": 24,
+    "action": "GET /api/auth/admin/users/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:13:30.709Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 16,
+  "fields": {
+    "user": 24,
+    "action": "PATCH /api/auth/admin/users/25/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:13:30.717Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 17,
+  "fields": {
+    "user": 25,
+    "action": "GET /api/auth/admin/users/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:13:30.721Z",
+    "details": "Status: 403"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 18,
+  "fields": {
+    "user": 24,
+    "action": "GET /api/audit/logs/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:13:30.728Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 19,
+  "fields": {
+    "user": 25,
+    "action": "GET /api/audit/logs/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:13:30.731Z",
+    "details": "Status: 403"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 20,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/login/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:28:28.203Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 21,
+  "fields": {
+    "user": null,
+    "action": "GET /api/auth/mfa/setup/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:28:28.227Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 22,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/mfa/verify/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:28:28.233Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 23,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/login/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:28:28.666Z",
+    "details": "Status: 401"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 24,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/login/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:28:29.110Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 25,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/login/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:29:55.225Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 26,
+  "fields": {
+    "user": 28,
+    "action": "GET /api/auth/mfa/setup/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:29:55.248Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 27,
+  "fields": {
+    "user": 28,
+    "action": "POST /api/auth/mfa/verify/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:29:55.254Z",
+    "details": "Status: 200"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 28,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/login/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:29:55.598Z",
+    "details": "Status: 401"
+  }
+},
+{
+  "model": "audit.auditentry",
+  "pk": 29,
+  "fields": {
+    "user": null,
+    "action": "POST /api/auth/login/",
+    "resource": "",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-12-29T11:29:55.915Z",
+    "details": "Status: 200"
+  }
+}
+]
