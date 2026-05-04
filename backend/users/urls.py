@@ -3,7 +3,7 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
-from .views import RegisterView, UserViewSet, CustomTokenObtainPairView, CaptchaView, VerifyEmailView
+from .views import RegisterView, UserViewSet, CustomTokenObtainPairView, CaptchaView, VerifyEmailView, GoogleAuthView
 from rest_framework.routers import DefaultRouter
 from django.urls import include
 
@@ -22,5 +22,6 @@ urlpatterns = [
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('mfa/setup/', MFASetupView.as_view(), name='mfa_setup'),
     path('mfa/verify/', MFAVerifyView.as_view(), name='mfa_verify'),
+    path('google/', GoogleAuthView.as_view(), name='google_auth'),
     path('admin/', include(router.urls)),
 ]

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { login } from '@/lib/auth';
+import { login, googleLogin } from '@/lib/auth';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -12,12 +12,15 @@ import { toast } from 'sonner';
 import { Eye, EyeOff } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, Suspense } from 'react';
+import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 
 export default function LoginPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
-      <LoginFormContents />
-    </Suspense>
+    <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || ''}>
+      <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+        <LoginFormContents />
+      </Suspense>
+    </GoogleOAuthProvider>
   );
 }
 
@@ -51,6 +54,23 @@ function LoginFormContents() {
       });
     }
   }, [searchParams]);
+
+  const handleGoogleSuccess = async (credentialResponse: any) => {
+    setLoading(true);
+    try {
+      const user: any = await googleLogin(credentialResponse.credential);
+      toast.success('Signed in with Google!');
+      if (user && (user.is_staff || user.is_superuser)) {
+        window.location.href = '/admin';
+      } else {
+        window.location.href = '/dashboard';
+      }
+    } catch (err: any) {
+      toast.error(err.response?.data?.error || 'Google sign-in failed. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -153,6 +173,29 @@ function LoginFormContents() {
               {loading ? 'Logging in...' : (showOtp ? 'Verify Code' : 'Sign In')}
             </Button>
           </form>
+
+          {!showOtp && (
+            <>
+              <div className="relative my-4">
+                <div className="absolute inset-0 flex items-center">
+                  <span className="w-full border-t border-border" />
+                </div>
+                <div className="relative flex justify-center text-xs uppercase">
+                  <span className="bg-background px-2 text-muted-foreground">or continue with</span>
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <GoogleLogin
+                  onSuccess={handleGoogleSuccess}
+                  onError={() => toast.error('Google sign-in failed. Please try again.')}
+                  useOneTap={false}
+                  theme="outline"
+                  shape="rectangular"
+                  width="368"
+                />
+              </div>
+            </>
+          )}
         </CardContent>
         <CardFooter className="flex flex-col space-y-2">
           <div className="text-sm text-center text-muted-foreground">

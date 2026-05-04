@@ -135,6 +135,70 @@ class CaptchaView(APIView):
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
 
+class GoogleAuthView(APIView):
+    permission_classes = (AllowAny,)
+
+    def post(self, request):
+        credential = request.data.get('credential')
+        if not credential:
+            return Response({'error': 'No credential provided.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            resp = requests.get(
+                'https://oauth2.googleapis.com/tokeninfo',
+                params={'id_token': credential},
+                timeout=5,
+            )
+            resp.raise_for_status()
+            token_data = resp.json()
+        except requests.exceptions.RequestException:
+            return Response({'error': 'Could not verify Google token.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        if not token_data.get('email_verified'):
+            return Response({'error': 'Google email not verified.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        expected_aud = settings.GOOGLE_CLIENT_ID
+        if expected_aud and token_data.get('aud') != expected_aud:
+            return Response({'error': 'Invalid token audience.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        email = token_data.get('email')
+        if not email:
+            return Response({'error': 'No email in token.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        user = User.objects.filter(email=email).first()
+        if not user:
+            base = email.split('@')[0]
+            username = base
+            counter = 1
+            while User.objects.filter(username=username).exists():
+                username = f"{base}{counter}"
+                counter += 1
+            user = User.objects.create(
+                email=email,
+                username=username,
+                first_name=token_data.get('given_name', ''),
+                last_name=token_data.get('family_name', ''),
+                is_active=True,
+            )
+            user.set_unusable_password()
+            user.save()
+
+        from rest_framework_simplejwt.tokens import RefreshToken as SimpleJWTRefreshToken
+        refresh = SimpleJWTRefreshToken.for_user(user)
+        # Add same custom claims as CustomTokenObtainPairSerializer
+        refresh['username'] = user.username
+        refresh['is_staff'] = user.is_staff
+        refresh['is_superuser'] = user.is_superuser
+        refresh['department'] = user.department
+        refresh['clearance_level'] = user.clearance_level
+        refresh['mfa_enabled'] = user.mfa_enabled
+
+        return Response({
+            'access': str(refresh.access_token),
+            'refresh': str(refresh),
+        })
+
+
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserAdminSerializer
