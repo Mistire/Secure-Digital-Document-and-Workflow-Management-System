@@ -85,12 +85,16 @@ function LoginFormContents() {
       }
     } catch (err: any) {
        console.log(err.response?.data);
-       if (err.response?.data?.detail === 'MFA_REQUIRED') {
-           setShowOtp(true);
-           toast.info('MFA Code Required');
-       } else {
-           toast.error(err.response?.data?.detail || 'Invalid credentials or code. Please try again.');
-       }
+        if (err.response?.data?.detail === 'MFA_REQUIRED') {
+            setShowOtp(true);
+            toast.info('MFA Code Required');
+        } else {
+            const errorMessage = err.response?.data?.detail || 
+                                err.response?.data?.error || 
+                                (typeof err.response?.data === 'string' ? err.response.data : null) ||
+                                'Invalid credentials or code. Please try again.';
+            toast.error(errorMessage);
+        }
     } finally {
       setLoading(false);
     }

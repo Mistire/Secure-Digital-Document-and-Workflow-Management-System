@@ -28,6 +28,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'axes.middleware.AxesMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -37,8 +38,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'audit.middleware.AuditMiddleware',
-    'axes.middleware.AxesMiddleware',
 ]
+
 
 ROOT_URLCONF = 'config.urls'
 
@@ -124,13 +125,25 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTHENTICATION_BACKENDS = [
+    'axes.backends.AxesBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]
 
+
 AXES_FAILURE_LIMIT = 5
-AXES_COOLOFF_TIME = 1 
+AXES_COOLOFF_TIME = timedelta(hours=1)
 AXES_RESET_ON_SUCCESS = True
-AXES_LOCKOUT_PARAMETERS = ["username", "ip_address"]
+AXES_LOCKOUT_PARAMETERS = ["username"]
+
+AXES_USERNAME_CALLABLE = "users.utils.get_axes_username"
+AXES_LOCKOUT_CALLABLE = "users.utils.axes_lockout_response"
+
+
+
+AXES_VERBOSE = True
+
+
+
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
