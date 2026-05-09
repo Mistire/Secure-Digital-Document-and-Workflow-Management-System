@@ -16,6 +16,10 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView
+from axes.helpers import get_client_username
+from axes.decorators import axes_dispatch
+from django.utils.decorators import method_decorator
+
 
 from .captcha import generate_captcha
 from .serializers import (
@@ -132,8 +136,10 @@ class CaptchaView(APIView):
             'captcha_image': f"data:image/png;base64,{image_base64}"
         })
 
+@method_decorator(axes_dispatch, name='post')
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
+
 
 class GoogleAuthView(APIView):
     permission_classes = (AllowAny,)
